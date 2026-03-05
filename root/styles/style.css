@@ -1,0 +1,372 @@
+:root{ 
+    --primary-color:   #1F2933;  /* graphite blue-gray (main UI, navbar) */
+    --secondary-color: #2E3440;  /* slightly lighter panels / cards */
+    --accent-color:    #E11D48;  /* sharp crimson red (CTAs, highlights) */
+
+    --dark-color:      #2b2929;  /* deep near-black background */
+    --darker-color:    #ffffff;  /* footer / deepest sections */
+
+    --light-color:     #ffffff;  /* subtle off-white surfaces */
+    --text-color:      #828c98;  /* primary text on dark bg */
+    --text-light:      #949dac;  /* muted text / metadata */
+
+    --success-color:   #22C55E;  /* clean green (success states, checkmarks) */
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    justify-content: space-evenly;
+    display:flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.section{
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+::selection{
+    background:var(--accent-color);
+    color: var(--ligth-color);
+
+}
+#navContainer{
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #1F2933;
+    z-index: 1000;
+
+}
+#navBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    background-color: #1F2933;
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: auto;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    #navBar {
+        justify-content: flex-start;
+        padding: 0;
+        gap: 0;
+    }
+
+    #navBar .menu-toggle {
+        display: block;
+        order: -1;
+    }
+
+    #navBar a {
+        display: none;
+    }
+
+    #navBar.active a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+
+    #navBar.active {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1F2933;
+        flex-direction: column;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #navContainer {
+        position: relative;
+    }
+
+}
+#intro{
+    position:relative;
+     margin-top: 100px;
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+
+        background-image: url("../images/IMG_7012.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+        z-index: -1;
+    }
+}
+
+
+#welcomeMsg{
+    font-size: 2.5rem;
+    color: var(--light-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+#bio{
+    font-size: 1.2rem;
+    color: var(--light-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    z-index: 1;
+}
+
+#contactBtn{
+    position: relative;
+    top:50px;
+    left:-2px;
+    font-size: 1.2rem;
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#industryHeading{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: var(--dark-color);
+}
+
+#industries-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#software-img, #consulting-img, #image3{
+    width: 30%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+#consulting-img{
+    width: 30%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    left:65%;
+
+}
+
+ #consulting{
+    position: relative;
+    left: 45px;
+    top: 30px;
+    color: var(--dark-color)
+    
+}
+
+ #consulting-icon{
+    position: relative;
+    left: 20px;
+    top:58.25px;
+    color: var(--dark-color)
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: var(--darker-color);
+    color: var(--text-color);
+    line-height: 1.6;
+     padding-top: 40px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight:700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 20px 15px;
+        margin: 10px 0;
+    }
+
+    #intro {
+        margin-top: 80px;
+        padding: 30px 15px;
+        min-height: 60vh;
+    }
+
+    #welcomeMsg {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    #bio {
+        font-size: 1rem;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #contactBtn {
+        font-size: 1rem;
+        padding: 8px 16px;
+        width:100%;
+        transition: 0.1s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcomeMsg {
+        font-size: 1.8rem;
+    }
+
+    #bio {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    #navBar a {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+/*Loading Animation*/
+.loader-wrapper{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: var(--darker-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 9999;
+}
+
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+
+#loader-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    z-index: 2;
+}
+.loader-circle{
+    position: absolute;
+    top:-2px;
+    left:2px;
+    width:100%;
+    height:100%;
+    border-radius:100%;
+    border: 4px solid transparent;
+    border-top-color: purple;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-circle:nth-child(2){
+    border-top-color:var(--secondary-color);
+    animation-duration: 2s;
+
+}
+
+.loader-circle:nth-child(3){
+    border-top-color:var(--accent-color);
+    animation-duration: 2.5s;
+
+}
+
+@keyframes spin{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
