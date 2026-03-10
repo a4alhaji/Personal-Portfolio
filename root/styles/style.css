@@ -687,10 +687,41 @@ figcaption {
 #boxes img {
     align-self: center;
     width: 100%;
-    height: 200px;           /* uniform height for all cards */
+    height: 300px;           /* uniform height for all cards */
     display: block;
-    object-fit: cover;       /* crop to fill without stretching */
+    object-fit: cover; 
+ 
+    
+        /* crop to fill without stretching */
 }
+
+.early-inspo:nth-child(1){
+    object-position: top;
+}
+
+
+
+.turning-point:nth-child(1){
+    object-position: 50% 41%;
+
+    
+}
+
+
+
+.current-endeavors:nth-child(1){
+    object-position: center 40%;
+}
+
+#Img-2025{
+    object-position: 50% 10%;
+}
+
+#Img-2021{
+    object-position: top;
+}
+
+
 
 /* responsive column counts for about timeline */
 @media (max-width: 768px) {
