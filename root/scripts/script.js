@@ -68,3 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const discoverBtn= document.getElementById('discover');
+
+    if(discover){
+        discover.addEventListener('click', function() {
+            window.location.href = '/root/pages/about.html';
+        });
+    }
+
+});
