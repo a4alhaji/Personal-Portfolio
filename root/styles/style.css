@@ -748,7 +748,7 @@ figcaption {
     padding: 10px;
     width: 100%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0.5);
-    flex-direction: column;
+    flex-direction: row;
     background-color: var(--darker-color);
 }
 
