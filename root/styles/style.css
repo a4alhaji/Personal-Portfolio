@@ -310,6 +310,7 @@ body{
 /* scale about page heading on small screens */
 #about-heading #head {
     font-size: 2rem;
+    font-weight: bold;
 }
 #about-heading #sub {
     font-size: 0.9rem;
@@ -748,7 +749,7 @@ figcaption {
     padding: 10px;
     width: 100%;
     box-shadow: 4px 4px 8px rgba(0, 0, 0.5);
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--darker-color);
 }
 
@@ -1113,4 +1114,118 @@ footer{
         transform:rotate(360deg);
     }
 
+}
+
+#skills-page-heading{
+    position: relative;
+    align-self:center;
+    margin-top: -100px;
+    justify-self:center;
+    font-size: larger;
+    font-weight: bolder;
+
+
+}
+
+.skill-heading{
+    display: flex;
+    flex-direction: row;          /* place text and button side-by-side */
+    justify-content: space-between; /* push button to right */
+    align-items: flex-start;      /* align items at top */
+    width: 100%;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: var(--text-color);
+    padding: 20px;
+    flex-wrap: wrap;              /* allow wrapping on small screens */
+}
+
+
+#skills-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    align-items: flex-start;   /* keep children aligned to left edge */
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;           /* center container on larger screens */
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    color:var(--secondary-color);
+    justify-items: self-start
+    ;
+
+ 
+  
+    
+ 
+
+}
+
+.list{
+    visibility: visible;
+    max-height: 0;                /* collapse by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+}
+
+/* class applied when list is expanded */
+.list.expanded {
+    max-height: 1000px; /* large value allows any list length to grow */
+}
+
+
+
+
+
+
+.see-moreBtn{
+    position: relative;
+    height:35px;
+    font-size: 1rem;
+    color: var(--light-color);
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  
+  
+    
+        
+    
+
+}
+
+
+  
+
+@media(max-width:768px) {
+
+    #skills-page-heading{
+        margin-top: -18px;
+        justify-self:center;
+        font-size: larger;
+
+    }
+
+    .skill-heading{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .see-moreBtn{
+        margin: 10px 0 0 auto; /* add some spacing when stacked */
+    }
+    }
+
+
+    
 }

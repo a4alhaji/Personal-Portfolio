@@ -79,3 +79,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
 });
+
+// skill list expand/collapse logic
+function setupSkillToggles() {
+    const sections = document.querySelectorAll('.skill-heading');
+    sections.forEach(section => {
+        const btn = section.querySelector('.see-moreBtn');
+        const list = section.querySelector('.list');
+        if (!btn || !list) return;
+        // ensure list starts collapsed
+        list.classList.remove('expanded');
+        list.style.maxHeight = '0';
+        btn.textContent = 'See More';
+
+        btn.addEventListener('click', () => {
+            const isExpanded = list.classList.toggle('expanded');
+            if (isExpanded) {
+                list.style.maxHeight = list.scrollHeight + 'px';
+                btn.textContent = 'See Less';
+            } else {
+                list.style.maxHeight = '0';
+                btn.textContent = 'See More';
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupSkillToggles);
+
+
