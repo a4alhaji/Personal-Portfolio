@@ -751,6 +751,7 @@ figcaption {
     box-shadow: 4px 4px 8px rgba(0, 0, 0.5);
     flex-direction: column;
     background-color: var(--darker-color);
+    border-radius: 10px;
 }
 
 .box, p, h4{
@@ -840,8 +841,7 @@ footer{
     padding: 0;
     text-align: center;
     transition: background-color 0.3s ease;
-
-  
+    border-radius: 5px;
 }
 
 
@@ -1227,4 +1227,198 @@ footer{
     }
 
 
+
+    #cv{
+        margin-left:30px;
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 35px;
+    } 
     
+    #cv-heading a{
+        
+        color:var(--dark-color);
+        font-size: smaller;
+        font-weight: 500;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+        
+        position:relative;
+       justify-self: center;
+       
+
+    }
+
+    #cv-heading{
+        
+        font-size: larger;
+        color: var(--dark-color);
+        margin: 1.5px;
+        justify-items: center;
+     
+        position:relative
+       
+    }
+
+  
+
+
+    
+
+/* ===== CV Styling ===== */
+
+#cv {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.cv-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--light-color);
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--light-color);
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--light-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cv-entry {
+    margin-bottom: 20px;
+}
+
+.entry-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.cv-entry h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--light-color);
+    margin: 0;
+}
+
+.entry-company {
+    font-size: 14px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.entry-date {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-left: auto;
+}
+
+.cv-entry ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.cv-entry li {
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.cv-entry li:before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cv-entry p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.skill-category {
+    margin-bottom: 18px;
+}
+
+.skill-category h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--light-color);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-category p {
+    color: var(--text-color);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #cv {
+        padding: 20px;
+        margin: 40px 10px;
+    }
+
+    .cv-header h1 {
+        font-size: 24px;
+    }
+
+    .entry-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .entry-date {
+        margin-left: 0;
+    }
+}

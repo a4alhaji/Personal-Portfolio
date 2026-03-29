@@ -1,0 +1,133 @@
+:root{ 
+    --primary-color:   #1F2933;  /* graphite blue-gray (main UI, navbar) */
+    --secondary-color: #2E3440;  /* slightly lighter panels / cards */
+    --accent-color:    #E11D48;  /* sharp crimson red (CTAs, highlights) */
+
+    --dark-color:      #111827;  /* deep near-black background */
+    --darker-color:    #0B0F14;  /* footer / deepest sections */
+
+    --light-color:     #E5E7EB;  /* subtle off-white surfaces */
+    --text-color:      #F9FAFB;  /* primary text on dark bg */
+    --text-light:      #9CA3AF;  /* muted text / metadata */
+
+    --success-color:   #22C55E;  /* clean green (success states, checkmarks) */
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background:var(--accent-color);
+    color: var(--ligth-color);
+
+}
+
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: var(--darker-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight:700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+
+#welcomeMsg{
+
+}
+
+#bio{
+    color: var(--light-color);
+    
+}
+#navBar{
+    position:absolute;
+    left:50%;
+    top: 0;
+}
+
+
+
+
+
+
+/*Loading Animation*/
+.loader-wrapper{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: var(--darker-color);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 9999;
+}
+
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.loader-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    z-index: 2;
+}
+
+.loader-circle{
+    position: absolute;
+    top:0;
+    left:65px;
+    width:30%;
+    height:100%;
+    border-radius:100%;
+    border: 4px solid transparent;
+    border-top-color: purple;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-circle:nth-child(2){
+    border-top-color:var(--secondary-color);
+    animation-duration: 2s;
+
+}
+
+.loader-circle:nth-child(3){
+    border-top-color:var(--accent-color);
+    animation-duration: 2.5s;
+
+}
+
+@keyframes spin{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
