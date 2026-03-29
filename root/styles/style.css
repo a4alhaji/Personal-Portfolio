@@ -1236,7 +1236,7 @@ footer{
         max-width: 100%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        padding: 35px;
+        padding: 20px;
     } 
     
     #cv-heading a{
@@ -1298,14 +1298,15 @@ footer{
     line-height: 1.6;
 }
 
-.contact-info a {
+.contact-info a, span {
     color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.contact-info a:hover {
+.contact-info a:hover, span:hover {
     color: var(--light-color);
+    cursor: pointer;
 }
 
 .cv-section {
@@ -1369,7 +1370,7 @@ footer{
 }
 
 .cv-entry li:before {
-    content: "•";
+    content: "=>";
     color: var(--accent-color);
     font-weight: bold;
     position: absolute;
@@ -1421,4 +1422,9 @@ footer{
     .entry-date {
         margin-left: 0;
     }
+}
+
+#current{
+    color: var(--accent-color);
+
 }
