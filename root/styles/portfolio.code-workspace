@@ -1,8 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "../.."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../../Date Scheduler"
+    }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": ["prtksh.html-dom-tree"],
+  },
 }

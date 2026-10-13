@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contactBtn) {
         contactBtn.addEventListener('click', function() {
-            window.location.href = '/root/pages/contact.html';
+            window.location.href = new URL('../pages/contact.html', document.querySelector('script[src*="script.js"]').src);
         });
     }
 });
@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', ()=>{
     const discoverBtn= document.getElementById('discover');
 
-    if(discover){
-        discover.addEventListener('click', function() {
-            window.location.href = '/root/pages/about.html';
+    if (discoverBtn) {
+        discoverBtn.addEventListener('click', function() {
+            window.location.href = new URL('../pages/about.html', document.querySelector('script[src*="script.js"]').src);
         });
     }
 
@@ -106,5 +106,4 @@ function setupSkillToggles() {
 }
 
 document.addEventListener('DOMContentLoaded', setupSkillToggles);
-
 
