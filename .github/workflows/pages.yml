@@ -33,6 +33,7 @@ jobs:
           cp root/images/* _site/images/
           cp root/styles/style.css _site/styles/
           cp root/scripts/script.js _site/scripts/
+          cp CNAME _site/CNAME
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
